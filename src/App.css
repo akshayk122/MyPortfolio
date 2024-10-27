@@ -1,38 +1,472 @@
+:root {
+  --bg-color: #0a192f;
+  --text-color: #8892b0;
+  --highlight-color: #64ffda;
+  --header-color: #ccd6f6;
+  --secondary-color: #112240;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.3;
+  overflow: hidden; /* Prevent body scrolling */
+}
+
 .App {
+  display: flex;
+  height: 100vh;
+}
+
+.left-pane {
+  width: 40%;
+  max-width: 500px;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-pane {
+  flex-grow: 1;
+  margin-left: 40%; /* Should match the width of left-pane */
+  height: 100vh;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.right-pane main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Adjust content-wrapper for the new layout */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--header-color);
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--highlight-color);
+}
+
+#about {
+  margin-bottom: 60px;
+}
+
+#about h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  color: var(--header-color);
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+#experience h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--highlight-color);
+  margin-bottom: 40px;
+}
+
+.job {
+  margin-bottom: 50px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.job-header .date {
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  color: var(--text-color);
+}
+
+.job-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--header-color);
+}
+
+.job p {
+  margin-bottom: 15px;
+}
+
+.job-links a {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 13px;
+  color: var(--highlight-color);
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.job-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.technology {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: var(--highlight-color);
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-color);
+  transition: fill 0.3s ease;
+}
+
+.social-links a:hover svg {
+  fill: var(--highlight-color);
+}
+
+.footer-text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: var(--text-color);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-text .highlight {
+  color: var(--highlight-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1024px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .left-pane {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    position: static;
+    padding: 20px;
+  }
+
+  .right-pane {
+    margin-left: 0;
+    height: auto;
+    padding: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Projects Section */
+#projects h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--highlight-color);
+  margin-bottom: 40px;
+}
+
+.project {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project-content {
+  flex: 1;
+  padding-right: 25px;
+}
+
+.project h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.project h3 a {
+  color: var(--header-color);
+  text-decoration: none;
+}
+
+.project p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.project-image {
+  flex: 0 0 300px;
+  margin-left: 25px;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover .project-image img {
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+/* Common styles for project and job items */
+.project, .job {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover, .job:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+/* Project specific styles */
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+.project-content {
+  flex: 1;
+  padding-right: 25px;
+}
+
+.project h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.project h3 a {
+  color: var(--header-color);
+  text-decoration: none;
+}
+
+.project p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.project-image {
+  flex: 0 0 300px;
+  margin-left: 25px;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover .project-image img {
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+/* Experience specific styles */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.job-header .date {
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  color: var(--highlight-color);
+}
+
+.job-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--header-color);
+}
+
+.job p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.job-links {
+  margin-bottom: 10px;
+}
+
+.job-links a {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 13px;
+  color: var(--highlight-color);
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.job-technologies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technology {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: var(--highlight-color);
+  background-color: rgba(100, 255, 218, 0.1);
+  padding: 3px 7px;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* Section headers */
+#projects h2, #experience h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--header-color);
+  margin-bottom: 40px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .project-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .project-image {
+    flex: 0 0 auto;
+    margin-left: 0;
+    width: 100%;
   }
 }
