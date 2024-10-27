@@ -22,11 +22,6 @@ function Footer() {
         ))}
       </div>
       <div className="footer-text">
-        <p>
-          Loosely designed in <span className="highlight">Figma</span> and coded in <span className="highlight">Visual Studio Code</span> by
-          yours truly. Built with <span className="highlight">Next.js</span> and <span className="highlight">Tailwind CSS</span>, deployed with{' '}
-          <span className="highlight">Vercel</span>. All text is set in the <span className="highlight">Inter</span> typeface.
-        </p>
       </div>
     </footer>
   );
