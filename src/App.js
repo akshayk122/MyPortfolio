@@ -3,8 +3,10 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import About from './components/About';
 import Footer from './components/Footer';
 import './App.css';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -12,10 +14,13 @@ function App() {
       <div className="left-pane">
         <Header />
         <Footer />
+
       </div>
       <div className="right-pane">
         <main>
-          <Home />
+          {/* <Home /> */}
+          <About />
+          <Skills />
           <Experience />
           <Projects />
         </main>

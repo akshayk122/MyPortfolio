@@ -10,13 +10,13 @@ function Experience() {
     },
     {
       date: "Apr 2021 - May 2022",
-      title: "CGI, Bangalore, India · Software Engineer",
+      title: "Software Engineer · CGI, Bangalore, India  ",
       description: "Expanded a financial data model based on business requirements tracking over 150,000 project finances using Java, .NET Core, C#, SQL Server, JavaScript, and Entity Framework for efficient database management.",
       technologies: ["Java", ".NET Core", "C#", "SQL Server", "JavaScript", "Entity Framework"]
     },
     {
       date: "Aug 2019 - Apr 2021",
-      title: "Aryati Technologies, Bangalore, India · Technical Associate",
+      title: "Technical Associate · Atyati Technologies, Bangalore, India",
       description: "Developed high-performance banking applications using ASP.NET Core MVC, JavaScript, RESTful APIs and MySQL Database. Implemented complex T-SQL stored procedures and functions for financial data processing in SQL with database transaction management.",
       technologies: ["ASP.NET Core MVC", "JavaScript", "RESTful APIs", "MySQL", "T-SQL"]
     }
