@@ -495,3 +495,31 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
 }
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  font-family: 'SF Mono', monospace;
+  font-size: 13px;
+  color: var(--highlight-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-link:hover {
+  color: var(--text-color);
+}
+
+.project-link span {
+  transition: transform 0.2s;
+}
+
+.project-link:hover span {
+  transform: translate(2px, -2px);
+}

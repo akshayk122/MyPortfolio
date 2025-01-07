@@ -5,7 +5,7 @@ function Header() {
     <header>
       <h1>Akshay Kumar</h1>
       <h2>Software Engineer</h2>
-      <p>I build Applications</p>
+      <p>Design 👨‍💻,Develop and Deploy</p>
       <nav>
         <ul>
           <li><a href="#about">ABOUT</a></li>
