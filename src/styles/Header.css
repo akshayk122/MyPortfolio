@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  margin: 1.5rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #3498db;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 1rem 0 0.5rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+h2 {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+  color: #3498db;
+  font-weight: 500;
+}
+
+p {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+nav {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3498db;
+}
