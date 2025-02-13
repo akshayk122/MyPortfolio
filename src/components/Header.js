@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
-import profileImage from '../images/Profile.jpeg';
+import profileImage from '../images/profile.svg';
 
 function Header() {
   return (
@@ -17,12 +17,12 @@ function Header() {
       </div>
       <h1>Akshay Kumar</h1>
       <h2>Software Engineer</h2>
-      <p>Design 👨‍💻,Develop and Deploy</p>
       <nav>
         <ul>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#experience">EXPERIENCE</a></li>
           <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#certificates">CERTIFICATIONS</a></li>
         </ul>
       </nav>
     </header>
