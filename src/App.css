@@ -160,6 +160,13 @@ h2 {
   margin-bottom: 40px;
 }
 
+#contact h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--highlight-color);
+  margin-bottom: 40px;
+}
+
 /* Skills Grid Styles */
 .skills-grid {
   display: grid;
@@ -550,7 +557,7 @@ footer {
   color: #3498db;
 }
 
-#projects h2, #experience h2, #skills h2, #about h2, #certificates h2 {
+#projects h2, #experience h2, #skills h2, #about h2, #certificates h2,#contact h2 {
   font-size: 28px;
   font-weight: 600;
   margin: 0;

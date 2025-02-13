@@ -23,6 +23,7 @@ function Header() {
           <li><a href="#experience">EXPERIENCE</a></li>
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#certificates">CERTIFICATIONS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </header>

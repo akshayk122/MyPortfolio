@@ -8,8 +8,10 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import Certificates from './components/Certificates';
+import Contact from './components/Contact';
 import AllProjects from './pages/AllProjects';
 import './App.css';
+import './styles/Contact.css';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
                 <Certificates />
                 <Experience />
                 <Projects />
+                <Contact />
               </main>
             </div>
           </div>
