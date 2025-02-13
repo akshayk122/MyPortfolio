@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
-import profileImage from '../images/profile.svg';
+import profileImage from '../images/photo.jpeg';
 
 function Header() {
   return (

@@ -2,18 +2,25 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
 .profile-photo {
-  width: 180px;
-  height: 180px;
-  margin: 1.5rem auto;
+  width: 200px;
+  height: 200px;
+  margin: 1rem auto;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #3498db;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--highlight-color);
+  box-shadow: 0 8px 16px rgba(100, 255, 218, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(100, 255, 218, 0.2);
+  border-color: var(--highlight-color);
 }
 
 .profile-photo img {
